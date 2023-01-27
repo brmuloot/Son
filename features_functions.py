@@ -32,7 +32,7 @@ def compute_features(sig_t, sig_s, sig_c):
                          threshold_crossing_rate
                          ]
     
-    t = np.linspace(0, (sig_t.shape[0] - 1)*(1/51200), sig_t.shape[0])
+    t = np.linspace(0, (sig_t.shape[0] - 1)*(1/44100), sig_t.shape[0]) #changement de fe à 44100
     feat_temp = [(0, ()), (1, ()), (8, (t,)), (9, (t,)), (10, ()), (11, ()),
                  (12, (5,)), (12, (30,)), (12, (500,)), (13, (5,2)), (13, (30,2)),
                  (13, (500,2)), (13, (5,inf)), (13, (30,inf)), (13, (500,inf)),
